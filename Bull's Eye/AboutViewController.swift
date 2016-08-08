@@ -21,7 +21,7 @@ class AboutViewController: UIViewController {
 
         // Do any additional setup after loading the view.
 		
-		if let path = Bundle.main.pathForResource("BullsEye", ofType: "html") {
+		if let path = Bundle.main.path(forResource: "BullsEye", ofType: "html") {
 			let data = try! Data(contentsOf: URL(fileURLWithPath: path))
 			webView.load(data, mimeType: "text/html", textEncodingName: "UTF-8", baseURL: URL(fileURLWithPath: Bundle.main.bundlePath))
 		}
